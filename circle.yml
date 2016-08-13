@@ -17,4 +17,4 @@ deployment:
     commands:
     - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
     - docker push $DOCKER_REPOSITORY
-    - ssh $SERVER "docker ps -aq | xargs --no-run-if-empty docker stop |xargs --no-run-if-empty docker rm && docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS && docker pull $DOCKER_REPOSITORY && docker run --restart=always -p 80:9000 -d $DOCKER_REPOSITORY"
+    - ssh $DEPLOY_SERVER "docker ps -aq | xargs --no-run-if-empty docker stop |xargs --no-run-if-empty docker rm && docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS && docker pull $DOCKER_REPOSITORY && docker run --restart=always -p 80:9000 -d $DOCKER_REPOSITORY"
