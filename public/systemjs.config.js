@@ -21,6 +21,7 @@ var packageNames = [
     '@angular/platform-browser-dynamic',
     '@angular/router',
     '@angular/testing',
+    '@angular/forms',
     '@angular/upgrade'
 ];
 

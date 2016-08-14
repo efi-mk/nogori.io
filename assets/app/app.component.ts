@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import { Component } from '@angular/core';
 
 /**
  * Created by efi on 06/08/16.
@@ -7,8 +7,9 @@ import {Component} from "@angular/core";
 @Component( {
     moduleId: module.id,
     selector:'my-app',
-    templateUrl: 'app.component.html'
+    templateUrl: 'app.component.html',
 })
+
 export class AppComponent {
 
 }
