@@ -7,10 +7,6 @@ dependencies:
     - docker info
     - docker build -t $DOCKER_REPOSITORY .
 
-test:
-  override:
-    - exit 0
-
 deployment:
   hub:
     branch: master
